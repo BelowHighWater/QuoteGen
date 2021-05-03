@@ -2,32 +2,48 @@
 h1 {
 	text-align:center; 
 	font-size: 10vh;
+	font-style: italic;
   	text-shadow: 0px 5px 10px black;
 	font-family:californian fb;
-	color:white
+	color:white;
+	display: flex;
+  	justify-content: center;
+  	position: fixed;
+ 	top: 40%;
+  	left: 0%;
+  	transform: translate(0%, -50%);
+  	border: 0px solid green;
 }
 h2 {
-	text-align:right; 
+	text-align:center; 
 	font-size: 5vh;
   	text-shadow: 0px 5px 10px black;
 	font-family:californian fb;
-	color:white
+	color:white;
+	display: flex;
+  	justify-content: center;
+  	position: fixed;
+ 	top: 90%;
+  	left: 50%;
+  	transform: translate(-50%, -100%);
+  	border: 0px solid green;
 }
 
 .center {
   display: flex;
   justify-content: center;
-  height: 100wh;
-  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
   border: 0px solid green;
 }
 </style>
 
 <body>
 <body onload="newQuote()">
-<div class="center">
-<h1><i><div id="quoteDisplay"></h1></i></div>
-<h2><div id="quoteeDisplay"></h2></div>
+<h1><div id="quoteDisplay"></h1>
+<h2><div id="quoteeDisplay"></h2>
 </div>
 
 
@@ -58,7 +74,7 @@ var quotees=['Jacques Cousteau - The Silent World',
 'Book of Jonah 2:12',
 'Dr Samuel Johnson',
 'Florence Welch - Never Let Me Go',
-'The Quran 25:53)',
+'The Quran 25:53',
 'John Masefield - Sea Fever',
 'Nicholas Monsarrat - The Cruel Sea'
 ]
