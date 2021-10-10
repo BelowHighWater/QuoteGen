@@ -1,7 +1,7 @@
 <style>
 h1 {
 	text-align:center; 
-	font-size: 5vw;
+	font-size: 5.5vw;
 	font-style: italic;
   	text-shadow: 0px 5px 10px black;
 	font-family:californian fb;
@@ -9,25 +9,10 @@ h1 {
 	display: flex;
   	justify-content: center;
   	position: fixed;
- 	top: 25%;
+ 	top: 50%;
   	left: 0%;
   	transform: translate(0%, -50%);
   	border: 0px solid green;
-}
-h2 {
-	text-align:center; 
-	font-size: 2.5vw;
-  	text-shadow: 0px 5px 10px black;
-	font-family:californian fb;
-	color:white;
-	display: flex;
-  	justify-content: center;
-  	position: fixed;
- 	top: 80%;
-  	left: 50%;
-  	transform: translate(-50%, -100%);
-  	border: 0px solid green;
-}
 
 .center {
   display: flex;
@@ -43,7 +28,6 @@ h2 {
 <body>
 <body onload="newQuote()">
 <h1><div id="quoteDisplay"></h1>
-<h2><div id="quoteeDisplay"></h2>
 </div>
 
 
@@ -81,8 +65,10 @@ var quotees=['Jacques Cousteau - The Silent World',
 
 function newQuote() {
 var randomNumber = Math.floor(Math.random()*(quotes.length));
-document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
-document.getElementById('quoteeDisplay').innerHTML = quotees[randomNumber];
+DisplayQuote = quotes[randomNumber] + '\n' + quotees[randomNumber];
+console.log(DisplayQuote)
+document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber] + '<span style="font-size:2.8vw"><br><br>' + quotees[randomNumber] + '</span>';
+<!--document.getElementById('quoteeDisplay').innerHTML = quotees[randomNumber];-->
 window.setInterval("newQuote()",1200000)}
 </script>
 </body>
