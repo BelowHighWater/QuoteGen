@@ -1,7 +1,7 @@
 <style>
 h1 {
 	text-align:center; 
-	font-size: 35px;
+	font-size: 30px;
 	font-style: italic;
   	text-shadow: 0px 5px 10px black;
 	font-family:californian fb;
@@ -67,7 +67,7 @@ function newQuote() {
 var randomNumber = Math.floor(Math.random()*(quotes.length));
 DisplayQuote = quotes[randomNumber] + '\n' + quotees[randomNumber];
 console.log(DisplayQuote)
-document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber] + '<span style="font-size:25px"><br><br>' + quotees[randomNumber] + '</span>';
+document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber] + '<span style="font-size:20px"><br><br>' + quotees[randomNumber] + '</span>';
 <!--document.getElementById('quoteeDisplay').innerHTML = quotees[randomNumber];-->
 window.setInterval("newQuote()",1200000)}
 </script>
