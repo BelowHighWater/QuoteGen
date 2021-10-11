@@ -1,0 +1,75 @@
+<style>
+h1 {
+	text-align:center; 
+	font-size: 10vh;
+	font-style: italic;
+  	text-shadow: 0px 5px 10px black;
+	font-family:californian fb;
+	color:white;
+	display: flex;
+  	justify-content: center;
+  	position: fixed;
+ 	top: 50%;
+  	left: 0%;
+  	transform: translate(0%, -50%);
+  	border: 0px solid green;
+
+.center {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  border: 0px solid green;
+}
+</style>
+
+<body>
+<body onload="newQuote()">
+<h1><div id="quoteDisplay"></h1>
+</div>
+
+
+<script>
+
+var quotes=['\"From birth, man carries the weight of gravity on his shoulders. He is bolted to earth. But man has only to sink beneath the surface and he is free.\"',
+'\"What a chance\, to get a better peek\. At the plants\, and creatures of the deep.\"',
+'\"On such a full sea are we now afloat\, And we must take the current when it serves\, Or lose our ventures.\"',
+'\"As for me\, I am tormented with an everlasting itch for things remote. I love to sail forbidden seas\, and land on barbarous coasts.\”',
+'\"Full fathom-five thy father lies\, of his bones are coral made. Those are pearls that were his eyes. Nothing of him that doth fade but doth suffer a sea-change\, into something rich & strange.\"',
+'\"We would be warm below the storm\, in our little hideaway beneath the waves. Resting our head on the sea bed\, in an octopus\'s garden near a cave.\"',
+'\"The sea is only the embodiment of a supernatural and wonderful existence. It is nothing but love and emotion; it is the Living Infinite.\"',
+'\"Take me, and cast me forth in to the sea: so shall the sea be calm unto you: for I know that for my sake this great tempest is upon you.\"',
+'\"When men come to like a sea-life, they are not fit to live on land.\"',
+'\"And it\'s peaceful in the deep\; Cathedral where you cannot breathe\; No need to pray\, no need to speak, Now I am under all.\"',
+'\"It was He who set the Two Seas rolling\, the one sweet and fresh\, the other salt and bitter\, and set a rampart between them\, an insurmountable barrier.\"',
+'\"I must go down to the seas again\; for the call of the running tide\, is a wild call and a clear call that may not be denied.\"',
+'\"He loved the sea, though not blindly: it was the cynical, self-contemptuous love of a man for a mistress whom he distrusts profoundly but cannot do without.\"'
+]
+
+var quotees=['Jacques Cousteau - The Silent World',
+'Prof. Emelius Browne - Bedknobs & Broomsticks',
+'William Shakespeare - Julius Caesar',
+'Herman Melville - Moby Dick',
+'William Shakespeare - The Tempest',
+'Ringo Starr - Octopus\'s Garden',
+'Jules Verne - 20\,000 Leagues Under The Sea',
+'Book of Jonah 2:12',
+'Dr Samuel Johnson',
+'Florence Welch - Never Let Me Go',
+'The Quran 25:53',
+'John Masefield - Sea Fever',
+'Nicholas Monsarrat - The Cruel Sea'
+]
+
+function newQuote() {
+var randomNumber = Math.floor(Math.random()*(quotes.length));
+DisplayQuote = quotes[randomNumber] + '\n' + quotees[randomNumber];
+console.log(DisplayQuote)
+document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber] + '<span style="font-size:6vh"><br><br>' + quotees[randomNumber] + '</span>';
+<!--document.getElementById('quoteeDisplay').innerHTML = quotees[randomNumber];-->
+window.setInterval("newQuote()",1200000)}
+</script>
+</body>
+</html>
